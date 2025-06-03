@@ -38,6 +38,19 @@ const Input = styled.input`
     font-size: 14px;
 `;
 
+const Link = styled.a`
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 15px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+`;
+
 const Button = styled.button`
     width: 100%;
     padding: 12px;
@@ -54,22 +67,10 @@ const Button = styled.button`
     }
 `;
 
-const Link = styled.a`
-    display: block;
-    text-align: right;
-    font-size: 12px;
-    color: #007bff;
-    text-decoration: none;
-    margin-bottom: 15px;
-
-    &:hover {
-        text-decoration: underline;
-    }
-`;
-
 const FooterText = styled.p`
     text-align: center;
     font-size: 14px;
+    margin-top: 15px;
 
     a {
         color: #007bff;
@@ -81,19 +82,22 @@ const FooterText = styled.p`
     }
 `;
 
-export default function Home() {
+export default function Cadastro() {
     return (
         <TelaStyled>
             <Card>
-                <Title>Login</Title>
+                <Title>Crie sua Conta</Title>
+                <Label>Nome completo</Label>
+                <Input type="text" placeholder="Digite seu nome" />
                 <Label>Email</Label>
                 <Input type="email" placeholder="Digite seu email" />
                 <Label>Senha</Label>
                 <Input type="password" placeholder="Digite sua senha" />
-                <Link href="#">Esqueceu a senha?</Link>
-                <Button>Entrar</Button>
+                <Label>Confirmar senha</Label>
+                <Input type="password" placeholder="Confirme sua senha" />
+                <Button>Cadastrar</Button>
                 <FooterText>
-                    Não tem conta? <Link href="/Criar_Conta">Cadastra-se</Link>
+                    Ja tem conta? <Link href="/">Voltar inicio</Link>
                 </FooterText>
             </Card>
         </TelaStyled>
